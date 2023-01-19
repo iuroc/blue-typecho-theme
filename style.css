@@ -1,0 +1,145 @@
+/* 全局属性 */
+* {
+    color: white;
+    font-family: '仓耳渔阳体';
+    word-wrap: break-word;
+    word-break: break-all;
+    text-align: justify;
+}
+
+body {
+    background-color: #0f59a4;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+[role="button"] {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.me-20 {
+    margin-left: 20px;
+}
+
+/* 网页头部 */
+.nav {
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    margin-bottom: 30px;
+    background-color: inherit;
+}
+
+.nav .title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav .link-list {
+    margin-left: auto;
+}
+
+.nav .link-list a:not(:first-child) {
+    margin-left: 20px;
+}
+
+.nav .link-list a.active {
+    font-weight: bold;
+    border-bottom: 1px solid white;
+    padding-bottom: 3px;
+}
+
+.article-list {
+    float: left;
+    width: 80%;
+}
+
+.article {
+    margin: 0 20px 30px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: border-color .3s;
+    padding-bottom: 20px;
+    display: block;
+}
+
+.article:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.article .title {
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    display: block;
+    transition: background-color .3s;
+}
+
+.article:hover .title {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.article .meta {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.markdown-body {
+    background-color: unset;
+    padding: 0 20px;
+}
+
+.markdown-body a {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    padding: 20px 0 20px 20px;
+}
+
+footer div {
+    display: inline-block;
+}
+
+footer div {
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .nav {
+        position: inherit;
+    }
+
+    .nav .title {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .nav .link-list {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .article-list {
+        width: 100%;
+    }
+}
