@@ -1,7 +1,13 @@
 /* 全局属性 */
+
+:root {
+    /* 纯蓝：#0f59a4 */
+    --theme-color: #a61b29;
+}
+
 * {
     color: white;
-    font-family: '仓耳渔阳体';
+    font-family: "dgdhethrferyhaer";
     word-wrap: break-word;
     word-break: break-all;
     text-align: justify;
@@ -42,7 +48,7 @@
 }
 
 body {
-    background-color: #0f59a4;
+    background-color: var(--theme-color);
     margin: 0 auto;
     max-width: 1400px;
 }

@@ -16,6 +16,16 @@
             $this->options->title(); ?></title>
     <link rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/5.1.0/github-markdown-dark.min.css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
+    <style>
+        @font-face {
+            font-family: "apee";
+            src: url(<?php $this->options->themeUrl('TsangerYuYangT_W03_W03.woff'); ?>);
+        }
+
+        * {
+            font-family: 'apee';
+        }
+    </style>
     <script>
         window.onload = function() {
             document.body.ondragstart = () => {
