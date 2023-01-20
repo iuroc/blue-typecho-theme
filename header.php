@@ -19,7 +19,7 @@
     <style>
         @font-face {
             font-family: "apee";
-            src: url(<?php $this->options->themeUrl('TsangerYuYangT_W03_W03.woff'); ?>);
+            src: url(https://cdn.jsdelivr.net/gh/oyps/blue-typecho-theme/TsangerYuYangT_W03_W03.woff);
         }
 
         * {
