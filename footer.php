@@ -1,3 +1,4 @@
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <footer>
     <div>© 2023 <a href="https://apee.top/">鹏优创</a>.
         All rights reserved.

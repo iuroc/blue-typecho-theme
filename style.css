@@ -283,15 +283,7 @@ footer div {
     padding: 0;
 }
 
-.comment-author {
-    display: flex;
-    align-items: center;
-}
 
-.comment-author .avatar {
-    margin-right: 10px;
-    border-radius: 5px;
-}
 
 
 .comments textarea,
@@ -303,6 +295,17 @@ footer div {
     outline: none;
     font-size: 18px;
 } */
+
+.comment-author {
+    display: flex;
+    align-items: center;
+}
+
+.comment-author .avatar {
+    margin-right: 10px;
+    border-radius: 16px;
+}
+
 .comments textarea,
 .comments input {
     background-color: rgba(255, 255, 255, 0.05);
@@ -313,6 +316,19 @@ footer div {
     flex: 1;
     border: none;
     width: 100%;
+}
+
+.comments .comment-content {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px 10px;
+    margin: 15px 0;
+    border-radius: 8px;
+}
+
+.comments .comment-content * {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
 }
 
 .comments textarea {
@@ -381,11 +397,41 @@ footer div {
     border-radius: 10px;
     margin-bottom: 20px;
 }
+
 .comment-body.comment-child {
     margin-top: 20px;
     background-color: rgba(255, 255, 255, 0.05);
     border-left: 2px solid rgba(255, 255, 255, 0.2);
 }
+
+/* 分页组件 */
+
+.page-navigator {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.page-navigator li {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.page-navigator li:not(:first-child) {
+    margin-left: 10px;
+}
+
+.page-navigator li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+.cancel-comment-reply {
+    margin-top: 20px;
+}
+
 @media screen and (max-width: 1400px) {
     .article-list {
         width: 75%;
@@ -497,4 +543,7 @@ footer div {
         flex: 100%;
     }
 
+    .comment-children .comment-list {
+        padding-left: 15px;
+    }
 }
