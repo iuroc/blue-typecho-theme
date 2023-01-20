@@ -5,7 +5,34 @@
     word-wrap: break-word;
     word-break: break-all;
     text-align: justify;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
+
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+*::selection {
+    --bg: rgba(255, 255, 255, .5) !important;
+    background: var(--bg);
+    color: inherit;
+}
+
+*::-moz-selection {
+    background: var(--bg);
+    color: inherit;
+}
+
+*::-webkit-selection {
+    background: var(--bg);
+    color: inherit;
+}
+
 
 body {
     background-color: #0f59a4;
@@ -35,8 +62,13 @@ a {
     align-items: center;
     position: sticky;
     top: 0;
-    margin-bottom: 30px;
     background-color: inherit;
+    z-index: 10;
+}
+
+.sticky-top {
+    position: sticky;
+    top: 0;
 }
 
 .nav .title {
@@ -60,11 +92,17 @@ a {
 
 .article-list {
     float: left;
-    width: 80%;
+    width: 75%;
+    padding: 30px 20px;
+}
+
+.article-list .main-title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
 }
 
 .article {
-    margin: 0 20px 30px;
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     overflow: hidden;
@@ -73,7 +111,12 @@ a {
     display: block;
 }
 
-.article:hover {
+.article:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.article:hover,
+.article.active {
     border-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -85,10 +128,21 @@ a {
     padding: 20px;
     display: block;
     transition: background-color .3s;
+    line-height: 1.5em;
 }
 
-.article:hover .title {
+
+.article:hover .title,
+.article.active .title {
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+.article .time {
+    padding-bottom: 2px;
+    border: 0 10px 2px;
+    border-style: dashed;
+    border-color: white;
+    border-width: 0 0 1px;
 }
 
 .article .meta {
@@ -96,22 +150,80 @@ a {
     margin-bottom: 20px;
 }
 
+.keywords {
+    margin-bottom: 30px;
+}
+
 .markdown-body {
     background-color: unset;
     padding: 0 20px;
 }
 
-.markdown-body a {
+.meta a,
+.keywords .tag {
+    padding: 3px 5px;
+    border-radius: 5px;
+}
+
+.keywords .tag:not(:first-child) {
+    margin-left: 10px;
+}
+
+.markdown-body a,
+.meta a,
+.keywords .tag {
     color: white;
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 2px 5px;
-    border-radius: 5px;
+}
+
+.markdown-body a:hover,
+.meta a:hover,
+.keywords .tag:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.markdown-body a {
+    border-bottom: 1px solid white;
+}
+
+.markdown-body img {
+    border-radius: 10px;
+}
+
+.sidebar {
+    float: left;
+    width: 25%;
+    padding: 30px 20px 30px 0;
+}
+
+.sidebar .card {
+    padding-bottom: 30px;
+}
+
+.sidebar .card:not(:last-child) {
+    margin-bottom: 30px;
+    border-bottom: 1px solid white;
+}
+
+.sidebar .card .title {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+
+.sidebar .card-body li {
+    margin-top: 5px;
 }
 
 footer {
     clear: both;
     text-align: center;
-    padding: 20px 0 20px 20px;
+    padding: 20px 0 40px 20px;
+    line-height: 1.5em;
 }
 
 footer div {
@@ -120,6 +232,56 @@ footer div {
 
 footer div {
     margin-right: 20px;
+}
+
+
+@media screen and (max-width: 1400px) {
+    .article-list {
+        width: 75%;
+    }
+
+    .sidebar {
+        width: 25%;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .article-list {
+        width: 72%;
+    }
+
+    .sidebar {
+        width: 28%;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .article-list {
+        width: 70%;
+    }
+
+    .sidebar {
+        width: 30%;
+    }
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .article-list {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .sidebar .card {
+        margin-left: 20px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -141,5 +303,18 @@ footer div {
 
     .article-list {
         width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .article .title {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .article .meta {
+        justify-content: center;
     }
 }

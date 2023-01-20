@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/5.1.0/github-markdown-dark.min.css">
     <link rel="stylesheet" href="style.css">
     <script>
-        window.onload = function() {
+        window.onload = function () {
             document.body.ondragstart = () => {
                 return false
             }
@@ -27,8 +27,8 @@
         </div>
     </div>
     <div class="article-list">
-        <div class="article" role="button">
-            <div class="title">我是文章的标题哦</div>
+        <div class="article">
+            <a class="title" href="./">我是文章的标题哦</a>
             <div class="meta">
                 <div class="time me-20">2022-12-13</div>
                 <div class="type me-20">编程技术</div>
@@ -51,13 +51,37 @@
                 </ol>
             </div>
         </div>
-        <a class="article" role="button">
-            <div class="title">我是文章的标题哦</div>
+        <div class="article">
+            <a class="title">我是文章的标题哦</a>
             <div class="meta">
                 <div class="time me-20">2022-12-13</div>
                 <div class="type me-20">编程技术</div>
             </div>
-        </a>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="card">
+            <div class="title">最近文章</div>
+            <div class="card-body">
+                <li class="text-truncate"><a href="https://apee.top/index.php/archives/11/">假期没几天了，说说感想和规划</a></li>
+                <li class="text-truncate"><a href="https://apee.top/index.php/archives/10/">一款 Bootstrap 风格的 Typecho
+                        主题</a></li>
+                <li class="text-truncate"><a href="https://apee.top/index.php/archives/5/">我的磨站点建设</a></li>
+                <li class="text-truncate"><a href="https://apee.top/index.php/archives/4/">我为什么又又回到思源了</a></li>
+                <li class="text-truncate"><a href="https://apee.top/index.php/archives/3/">2023，新起点，再出发</a></li>
+            </div>
+        </div>
+        <div class="card">
+            <div class="title">最近文章</div>
+            <div class="card-body">
+                <li class="text-truncate"><a href="https://apee.top/index.php/archives/11/">假期没几天了，说说感想和规划</a></li>
+                <li class="text-truncate"><a href="https://apee.top/index.php/archives/10/">一款 Bootstrap 风格的 Typecho
+                        主题</a></li>
+                <li class="text-truncate"><a href="https://apee.top/index.php/archives/5/">我的磨站点建设</a></li>
+                <li class="text-truncate"><a href="https://apee.top/index.php/archives/4/">我为什么又又回到思源了</a></li>
+                <li class="text-truncate"><a href="https://apee.top/index.php/archives/3/">2023，新起点，再出发</a></li>
+            </div>
+        </div>
     </div>
     <footer>
         <div>© 2023 <a href="https://apee.top/">鹏优创</a>.
