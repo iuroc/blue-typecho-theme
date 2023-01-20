@@ -33,6 +33,13 @@
     color: inherit;
 }
 
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.me-3 {
+    margin-right: 15px;
+}
 
 body {
     background-color: #0f59a4;
@@ -40,7 +47,9 @@ body {
     max-width: 1400px;
 }
 
-[role="button"] {
+[role="button"],
+[type="button"],
+button {
     cursor: pointer;
 }
 
@@ -90,6 +99,7 @@ a {
     padding-bottom: 3px;
 }
 
+/* 左边栏 */
 .article-list {
     float: left;
     width: 75%;
@@ -154,10 +164,7 @@ a {
     margin-bottom: 30px;
 }
 
-.markdown-body {
-    background-color: unset;
-    padding: 0 20px;
-}
+
 
 .meta a,
 .keywords .tag {
@@ -167,6 +174,12 @@ a {
 
 .keywords .tag:not(:first-child) {
     margin-left: 10px;
+}
+
+/* 文章正文 */
+.markdown-body {
+    background-color: unset;
+    padding: 0 20px;
 }
 
 .markdown-body a,
@@ -190,6 +203,7 @@ a {
     border-radius: 10px;
 }
 
+/* 侧边栏 */
 .sidebar {
     float: left;
     width: 25%;
@@ -219,6 +233,7 @@ a {
     margin-top: 5px;
 }
 
+/* 网页底部 */
 footer {
     clear: both;
     text-align: center;
@@ -234,7 +249,143 @@ footer div {
     margin-right: 20px;
 }
 
+/* 评论区 */
+/* .comment-body {
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+}
 
+.comment-list {
+    list-style: none;
+}
+
+.comment-reply,
+.cancel-comment-reply {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: inline-block;
+}
+
+
+.comment-children {
+    margin-top: 20px;
+}
+
+.cancel-comment-reply {
+    margin-top: 20px;
+
+}
+
+:not(.comment-children)>.comment-list {
+    padding: 0;
+}
+
+.comment-author {
+    display: flex;
+    align-items: center;
+}
+
+.comment-author .avatar {
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+
+.comments textarea,
+.comments input {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 15px;
+    outline: none;
+    font-size: 18px;
+} */
+.comments textarea,
+.comments input {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 8px 10px;
+    outline: none;
+    font-size: 18px;
+    display: block;
+    flex: 1;
+    border: none;
+    width: 100%;
+}
+
+.comments textarea {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.comments .inputs {
+    display: flex;
+    margin: 0 -15px;
+    align-items: center;
+}
+
+.comments .inputs .item label {
+    padding: 0 15px;
+}
+
+.comments .inputs .item {
+    flex: 30%;
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.comments textarea::placeholder,
+.comments input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.comments .textarea-label {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.comments .submit {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 10px 15px;
+    font-size: 18px;
+}
+
+.comments .submit:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.comments ol {
+    list-style: none;
+}
+
+:not(.comment-children)>.comment-list {
+    padding-left: 0;
+}
+
+
+.comment-body.comment-parent {
+    border: 3px dashed rgba(255, 255, 255, 0.5);
+}
+
+.comments .comment-body {
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.comment-body.comment-child {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+}
 @media screen and (max-width: 1400px) {
     .article-list {
         width: 75%;
@@ -265,6 +416,16 @@ footer div {
     .sidebar {
         width: 30%;
     }
+
+    .comments .inputs {
+        flex-wrap: wrap;
+    }
+
+    .comments .inputs .item {
+        flex: 100%;
+    }
+
+
 }
 
 
@@ -282,6 +443,16 @@ footer div {
     .sidebar .card {
         margin-left: 20px;
     }
+
+    .comments .inputs {
+        flex-wrap: nowrap;
+    }
+
+    .comments .inputs .item {
+        flex: 30%;
+    }
+
+
 }
 
 @media screen and (max-width: 600px) {
@@ -317,4 +488,13 @@ footer div {
     .article .meta {
         justify-content: center;
     }
+
+    .comments .inputs {
+        flex-wrap: wrap;
+    }
+
+    .comments .inputs .item {
+        flex: 100%;
+    }
+
 }
