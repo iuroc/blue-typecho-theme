@@ -12,6 +12,9 @@
             赣公网安备 36010802000693号
         </a>
     </div>
+    <div>
+        <a href="https://typecho.org" target="_blank">Typecho</a>，<a href="https://github.com/oyps/blue-typecho-theme" target="_blank">Blue 主题</a>
+    </div>
 </footer>
 </body>
 

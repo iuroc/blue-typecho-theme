@@ -168,16 +168,18 @@ a {
 }
 
 .keywords {
-    margin-bottom: 30px;
-    line-height: 1.5em;
+    margin-bottom: 20px;
+    text-align: left;
 }
-
-
 
 .meta a,
 .keywords .tag {
     padding: 3px 5px;
     border-radius: 5px;
+}
+
+.keywords .tag {
+    margin-bottom: 10px;
 }
 
 .keywords .tag:not(:first-child) {
@@ -195,6 +197,7 @@ a {
 .keywords .tag {
     color: white;
     background-color: rgba(255, 255, 255, 0.1);
+    display: inline-block;
 }
 
 .markdown-body a:hover,
@@ -255,55 +258,10 @@ footer div {
 
 footer div {
     margin-right: 20px;
+    margin-bottom: 10px;
 }
 
 /* 评论区 */
-/* .comment-body {
-    margin-bottom: 20px;
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 15px;
-    border-radius: 10px;
-}
-
-.comment-list {
-    list-style: none;
-}
-
-.comment-reply,
-.cancel-comment-reply {
-    padding: 5px 10px;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.1);
-    display: inline-block;
-}
-
-
-.comment-children {
-    margin-top: 20px;
-}
-
-.cancel-comment-reply {
-    margin-top: 20px;
-
-}
-
-:not(.comment-children)>.comment-list {
-    padding: 0;
-}
-
-
-
-
-.comments textarea,
-.comments input {
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 5px;
-    padding: 15px;
-    outline: none;
-    font-size: 18px;
-} */
-
 .comment-author {
     display: flex;
     align-items: center;
@@ -420,20 +378,26 @@ footer div {
     text-align: center;
 }
 
-.page-navigator li {
+.page-navigator li,
+.page-navigator a {
     display: inline-block;
+}
+
+
+.page-navigator a {
     padding: 6px 10px;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+.page-navigator a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .page-navigator li:not(:first-child) {
     margin-left: 10px;
 }
 
-.page-navigator li:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
 
 
 .cancel-comment-reply {
