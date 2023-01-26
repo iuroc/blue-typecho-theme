@@ -1,3 +1,13 @@
+<?php
+
+/**
+ * Blue Typecho Theme
+ * @package blue-typecho-theme
+ * @author 欧阳鹏
+ * @version 1.2.0
+ * @link https://apee.top
+ */
+?>
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php $this->need('header.php'); ?>
 <div class="article-list">
