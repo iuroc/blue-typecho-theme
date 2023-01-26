@@ -28,6 +28,7 @@
 
 <body>
     <div class="nav">
+        <img src="<?php $this->options->themeUrl('logo.svg'); ?>" style="width: 40px; border-radius: 15px; margin-right: 15px;">
         <a class="title" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>
         <div class="link-list">
             <a class="<?php if ($this->is('index')) : ?>active<?php endif; ?>" href="<?php $this->options->siteUrl(); ?>">首页</a>
