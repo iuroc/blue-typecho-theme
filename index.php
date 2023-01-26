@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Blue Typecho Theme
- * @package blue-typecho-theme
+ * 鹏优创纯色主题
+ * @package Blue Typecho Theme
  * @author 欧阳鹏
  * @version 1.2.0
  * @link https://apee.top
