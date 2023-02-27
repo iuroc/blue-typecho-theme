@@ -1,6 +1,6 @@
 # Blue-Typecho-Theme
 
-> 蓝色 Typecho 主题
+> 纯色 Typecho 主题
 
 ## 项目信息
 
